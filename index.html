@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <base target="_top">
+  <style>
+    body{
+      font-family:Arial,sans-serif;
+      text-align:center;
+      padding:20px;
+    }
+    select{
+      width:320px;
+      padding:10px;
+      font-size:16px;
+      border-radius:8px;
+    }
+    img{
+      width:400px;
+      margin-top:20px;
+    }
+    h2{
+      color:#0b3d91;
+    }
+  </style>
+</head>
+
+<body>
+
+<h2>Pilih Warna Fronx</h2>
+
+<select id="warna" onchange="ganti()">
+<option value="0">LAND BREEZE GREEN PEARL METALLIC - BLUISH BLACK PEARL</option>
+<option value="1">ARCTIC WHITE PEARL - BLUISH BLACK PEARL</option>
+<option value="2">PEARL BLUISH BLACK</option>
+</select>
+
+<br>
+
+<img id="mobil">
+
+<h2 id="harga"></h2>
+
+<script>
+
+const data=[
+{
+gambar:"https://lh3.googleusercontent.com/d/128PQNzQ-4Aan9HpK4PZYQu_NSJ2nlcRo",
+harga:"Rp758.000.000"
+},
+{
+gambar:"https://lh3.googleusercontent.com/d/1ySgahipfR2BpPykmHOaTKkUEthG5-4HZ",
+harga:"Rp758.000.000"
+},
+{
+gambar:"https://drive.google.com/uc?export=view&id=1umNSWGbqfaEZ7f4JGsDXJk8BPs2p3opS",
+harga:"Rp755.000.000"
+}
+];
+
+function ganti(){
+
+let i=document.getElementById("warna").value;
+
+document.getElementById("mobil").src=data[i].gambar;
+
+document.getElementById("harga").innerHTML=data[i].harga;
+
+}
+
+ganti();
+
+</script>
+
+</body>
+</html>
